@@ -1,0 +1,42 @@
+<!-- <nav class="md-nav md-nav--primary" aria-label="Primary navigation">
+    <div class="md-nav__title">
+        <a href="{{ base_url }}/" title="{{ config.site_name }}" aria-label="Homepage">
+            {{ config.site_name }}
+        </a>
+    </div>
+    <div class="md-nav__scrollwrap">
+        <div class="md-nav__scroll">
+            <ul class="md-nav__list" data-md-scrollfix>
+                {% for nav_item in nav %}
+                    <li class="md-nav__item">
+                        <a href="{{ nav_item.url | url }}" title="{{ nav_item.title }}" class="md-nav__link">
+                            {{ nav_item.title }}
+                        </a>
+                        {% if nav_item.children %}
+                            <ul class="md-nav__list">
+                                {% for sub_item in nav_item.children %}
+                                    <li class="md-nav__item">
+                                        <a href="{{ sub_item.url | url }}" title="{{ sub_item.title }}" class="md-nav__link">
+                                            {{ sub_item.title }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/api-endpoints">API Endpoints</a></li>
+    <li><a href="/api-overview">API Overview</a></li>
+    <li><a href="/jquery-examples">jQuery Examples</a></li>
+    <li><a href="/jquery-overview">jQuery Overview</a></li>
+  </ul>
+</nav>

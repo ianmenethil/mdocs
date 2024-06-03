@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ config.site_name }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ meta }}
+  {{ stylesheet }}
+  {{ scripts }}
+  <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
+</head>
+<body>
+  <header>
+    {{ config.site_name }}
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>&copy; {{ config.site_name }}</p>
+  </footer>
+  <script>
+    docsearch({
+      apiKey: 'YOUR_DOCSEARCH_API_KEY',
+      indexName: 'YOUR_DOCSEARCH_INDEX_NAME',
+      container: '#docsearch'
+    });
+  </script>
+</body>
+</html>
