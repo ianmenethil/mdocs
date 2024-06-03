@@ -1,0 +1,39 @@
+site_name: Payment Plugin Documentation
+theme:
+  name: 'material'
+  custom_dir: 'overrides'
+  features:
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+
+nav:
+  - Home: index.md
+  - API Endpoints: api-endpoints.md
+  - API Overview: api-overview.md
+  - jQuery Examples: jquery-examples.md
+  - jQuery Overview: jquery-overview.md
+
+plugins:
+  - search
+  - mermaid2
+  - markdownextradata
+  - git-revision-date-localized
+  - localsearch
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/extra.js
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.tilde
