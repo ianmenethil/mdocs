@@ -1,19 +1,12 @@
 <header class="md-header">
-	<div class="md-header__inner md-grid">
-		<div class="md-header__title">
-			<a href="{{ base_url }}/">{{ config.site_name }}</a>
-		</div>
-		<div class="md-header__nav">
-			<nav class="md-nav">
-				<ul class="md-nav__list">
-					<li class="md-nav__item">
-						<a href="{{ base_url }}/docs">Docs</a>
-					</li>
-					<li class="md-nav__item">
-						<a href="{{ base_url }}/about">About</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</header>
+  <div class="md-header__inner md-grid">
+    <div class### 4. Ensure Correct CSS and JS Integration
+
+Add custom CSS and JS files if needed, and ensure they are referenced correctly in the `mkdocs.yml`:
+
+```yaml
+extra_css:
+  - 'stylesheets/extra.css'
+
+extra_javascript:
+  - 'javascripts/extra.js'

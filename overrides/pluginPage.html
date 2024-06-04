@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <script src="https://cdn.tailwindcss.com"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="min-h-screen bg-zinc-50 dark:bg-zinc-900 p-6">
+    <div class="max-w-4xl mx-auto bg-white dark:bg-zinc-800 rounded-2xl shadow-lg overflow-hidden">
+      <div class="p-8">
+
+        <div class="mb-8">
+          <h2 class="text-3xl font-semibold text-zinc-900 dark:text-zinc-100 mb-6">Program Configuration</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="URL">
+            <button class="bg-green-600 text-white py-3 px-6 rounded-lg">UAT Test</button>
+            <div class="flex items-center space-x-3">
+              <label class="text-zinc-900 dark:text-zinc-100">Version:</label>
+              <div class="flex space-x-2">
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100">
+                  <input type="radio" id="v3" name="version" class="dark:bg-zinc-700"><span class="ml-1">v3</span>
+                </label>
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100">
+                  <input type="radio" id="v4" name="version" class="dark:bg-zinc-700"><span class="ml-1">v4</span>
+                </label>
+              </div>
+            </div>
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="Merchant Code">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="Timestamp">
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-3xl font-semibold text-zinc-900 dark:text-zinc-100 mb-6">Credentials</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="API Key">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="Username">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="password" placeholder="Password">
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-3xl font-semibold text-zinc-900 dark:text-zinc-100 mb-6">Payment Details</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="flex flex-col">
+              <label class="text-zinc-900 dark:text-zinc-100 mb-2">Payment Mode:</label>
+              <select class="px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600">
+                <option>Make Payment</option>
+              </select>
+            </div>
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="number" placeholder="Amount">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="Redirect URL">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="mPUID">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="Card Proxy">
+            <input class="w-full px-4 py-3 border rounded-lg dark:bg-zinc-700 dark:border-zinc-600" type="text" placeholder="Callback URL">
+          </div>
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col">
+              <label class="text-zinc-900 dark:text-zinc-100 mb-2">Options:</label>
+              <div class="flex flex-wrap">
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Allow GooglePay</span>
+                </label>
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Allow ApplePay</span>
+                </label>
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Allow PayId</span>
+                </label>
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Allow Bank Payments</span>
+                </label>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <label class="text-zinc-900 dark:text-zinc-100 mb-2">Additional Options:</label>
+              <div class="flex flex-wrap">
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Hide Terms and Conditions</span>
+                </label>
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Hide Merchant Logo</span>
+                </label>
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Show Failed Fee on Tokenising</span>
+                </label>
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Show Tokenisation Fee</span>
+                </label>
+                <label class="flex items-center text-zinc-900 dark:text-zinc-100 mb-2 mr-4">
+                  <input type="checkbox" class="dark:bg-zinc-700"><span class="ml-2">Send Confirmation Email to Merchant</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
